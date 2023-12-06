@@ -13,7 +13,7 @@ import requests
 
 @pytest.mark.smoke
 @pytest.mark.regression
-@pytest.mark.parametrize("id", [("656e0efc03e2430141921d4c")])
+@pytest.mark.parametrize("id", [("656eed5903e2430141922234")])
 def test_delete_note_with_valid_id(valid_login, id):
     response = requests.delete(f"{pytest.BASE_URL}/notes/{id}", headers=valid_login, verify=False)
     assert response.status_code == 200
